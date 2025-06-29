@@ -1,0 +1,48 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Evaluations</h1>
+
+<%= link_to "New Evaluation", new_evaluation_path, class: "btn-primary" %>
+
+<table class = "eventTable">
+      <tr>
+        <th>Presentation</th>
+        <th>Evaluator User</th>
+        <th>Score</th>
+        <th>Comments</th>
+        <th>Created</th>
+        <th>Updated</th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    
+    <% @evaluations.each do |evaluation| %>
+    <tr>
+        <td><%= evaluation.presentation.title %></td>
+        <td><%= evaluation.user.name %></td>
+        <td><%= evaluation.score %></td>
+        <td><%= evaluation.comments %></td>
+        <td><%= evaluation.created_at %></td>
+        <td><%= evaluation.updated_at %></td>
+        
+        <!-- Show details or restricted based on user role -->
+        <td>
+            <%= link_to 'View', evaluation_path(evaluation) %>
+        </td>
+        
+        <% if current_user&.instructor? %>
+            <td><%= link_to 'Edit', edit_evaluation_path(evaluation) %></td>
+            <td>
+                <%= form_with model: evaluation, method: :delete do |form| %>
+                    <%= form.submit 'Delete' %>
+                <% end %>
+            </td>
+        <% else %>
+            <td colspan="2">Restricted</td>
+        <% end %>
+    </tr>
+    <% end %>
+</table>
+
+

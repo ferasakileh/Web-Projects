@@ -1,0 +1,212 @@
+body {
+  background-color: #fa4545;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
+    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
+    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
+    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+  padding: 20vh 1rem;
+  text-align: center;
+}
+
+a {
+  color: rgba(#000, 0.7);
+
+  &:focus,
+  &:hover {
+    color: rgba(#000, 0.6);
+  }
+}
+
+.header {
+  font-family: 'Poppins', sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background:transparent;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+.logo {
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  color: aliceblue;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  color:rgb(234, 234, 236);
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color:rgb(163, 163, 163)
+}
+
+.home {
+  font-family: 'Poppins', sans-serif;
+  height: 200vh;
+  display:all;
+  align-items: center;
+  padding: 0 10%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-content {
+  font-family: 'Poppins', sans-serif;
+  max-width: none;
+}
+
+.home-content h1 {
+  position: relative;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.home-content h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: rgb(237, 186, 186);
+}
+
+
+.home-content p {
+  position: relative;
+  font-size: 24px;
+  font-weight: 200;
+  line-height: 1.4;
+}
+
+.home-content .btn-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 345px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-box a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100%;
+  background: #d2d7d9;
+  border: 2px solid #d2d7d9;
+  border-radius: 8px;
+  font-size: 20px;
+  color:black;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 1;
+  overflow: hidden;
+  transition: .5s;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-box a:nth-child(1) {
+  background: transparent;
+  color: white;
+}
+
+.btn-box a:nth-child(1):hover {
+  color: #dd0000;
+}
+
+.btn-box a:nth-child(1)::before {
+  background: #c7c7c7;
+}
+
+.btn-box a:nth-child(2) {
+  background: transparent;
+  color: white;
+}
+
+.btn-box a:nth-child(2):hover {
+  color: #dd0000;
+}
+
+.btn-box a:nth-child(2)::before {
+  background: #c7c7c7;
+}
+
+.btn-box a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: white;
+  z-index: -1;
+  transition: .5s;
+}
+
+.btn-box a:hover::before {
+  width: 100%;
+}
+
+.profile-image {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  border-radius: 10%;
+  object-fit: cover;
+}
+
+ul {
+  list-style-type: none; /* Remove bullet points */
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+table {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td {
+  border: 1px solid black;
+  text-align: center; /* Center horizontally */
+  vertical-align: middle; /* Center vertically */
+  height: 100px; /* Adjust height if needed */
+}
+
+.bolded {
+  font-weight: bold;
+}
+
+.teaching-content ul {
+  text-align: left; 
+}
+
+.teaching-content h3 {
+  text-align: left; 
+}

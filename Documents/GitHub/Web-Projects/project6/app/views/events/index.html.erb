@@ -1,0 +1,47 @@
+<h1>Events</h1>
+
+<% if current_user&.instructor? %>
+    <%= link_to 'New Event', new_event_path, class: 'btn btn-primary' %>
+<% end %>
+
+<table class="eventTable">
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Date</th>
+        <th>Description</th>
+        <th>Created</th>
+        <th>Updated</th>
+        <th></th>
+        <th></th>
+    </tr>
+    
+    <% @events.each do |event| %>
+    <tr>
+        <td><%= event.id %></td>
+        <td><%= event.title %></td>
+        <td><%= event.date %></td>
+        <td><%= event.description %></td>
+        <td><%= event.created_at %></td>
+        <td><%= event.updated_at %></td>
+        
+        <!-- Show details or restricted based on user role -->
+        <td>
+            <%= link_to 'View', event_path(event) %>
+        </td>
+        
+        <% if current_user&.instructor? %>
+            <td><%= link_to 'Edit', edit_event_path(event) %></td>
+            <td>
+                <%= form_with model: event, method: :delete do |form| %>
+                    <%= form.submit 'Delete' %>
+                <% end %>
+            </td>
+        <% else %>
+            <td colspan="2">Restricted</td>
+        <% end %>
+    </tr>
+    <% end %>
+</table>
+
+

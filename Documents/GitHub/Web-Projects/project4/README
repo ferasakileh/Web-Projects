@@ -1,0 +1,38 @@
+Project 4
+
+Group Members: Annelise Rasmussen, Macy Ostrander, Feras Akileh, Jonathan Goshima
+
+Project Description:
+
+The team set out to redesign Professor Shaileshh Bojja Venkarakrishnan's website utilizing the static site generator, Middleman. This project's goal was to to use HTML, CSS, ERb, and markdown files to create a professional website. The team's rendition of the website contains four pages: home, research, news, and teaching, for current courses. Each page is formatted with a header, containing an updated navigation bar, and a footer, containing contact information.
+
+The team employed the use of multiple frameworks and programs to make this idea come to life.
+
+These include:
+
+        HTML
+        CSS
+        ERb
+        Middleman
+
+HTML allowed the team to stream line the creation of the web pages while CSS gave the team an opportunity to make the web page
+aesthetically pleasing to the user.
+
+ERb was the baseline coding language used for this project, allowing the creation of HTML files.
+
+Middleman was used the generate the static website.
+
+Overall, this project gave the team a lot more experience with formatting and design with HTML, CSS, and ERb. In addition, it gave the team experience with Middleman and static site generation. This site provides Professor Shaileshh Bojja Venkarakrishnan with a more sleek and modern version of his previous site, with well organized information and easy access to how to contact him.
+
+Individual Contributions:
+Annelise Rasmussen - worked on the news page
+
+Macy Ostrander - worked on the teaching page
+
+Feras Akileh - worked on the index (home) page
+
+Jonathan Goshima - worked on the research page
+
+Resources:
+    https://sites.google.com/site/shaileshhbv/
+    https://validator.w3.org/

@@ -1,0 +1,132 @@
+CSE 3901 Project 5 - Calculator part 2
+Group 4
+
+Group Members: Annelise Rasmussen, Macy Ostrander, Feras Akileh, Jonathan Goshima
+
+Project Description:
+
+    The objective of the calculator project is to create a calculator application with the following computational capabilities:
+
+        General Arithmetic (addition, subtraction multiplication, division)
+        Trigonometry Functions (sine, cosine, tangent)
+        Exponential Calculation
+        Modulo Calculation
+        Factorial Calculation
+        Percentage Calculation
+        Logarithmic Calculation
+        Square and Cubic Roots of Numbers
+        Absolute Value Calculation
+        List Analysis Capability (median, mode, min, max, mean)
+        Decimal to Binary Conversion
+        Decimal to Octal Conversion
+        Decimal to Hex Conversion
+        Fahrenheit to Celsius Conversion
+        Generating odd numbers to a user specified limit
+        Generating even numbers to a user specified limit
+        Generating prime numbers to a user specified limit
+        Generate Fibonacci numbers to a user specified limit
+        Generate square numbers to a user specified limit
+
+    The project was coded using JavaScript and HTML. To run the calculator, we have been using "npx serve" to run the project. 
+    The project consists of three main files that support the calculator:
+        
+        calc.html
+            This file contains the HTML that creates the layout for our calculator. It holds all of the buttons and the box that displays calculations.
+
+        holder.js
+            This file is the main driver of our code. It is where are three main helper functions, tokenizer.js, parser.js, 
+            function_evaluator.js, and input_validator.js, get called. This file takes the input string after the user hits the
+            "=" button, check the input's syntax to ensure it is valid, tokenizes it, parses it, then evaluates each function/operation.
+
+        methods.js
+            This file contains the methods that do the heavy lifting and calculations. All of the necessary features of the calculator are in this file. 
+
+Methods:
+
+    def is_input_valid
+        This function checks a string and makes sure it is valid input for the calculator.
+
+    def parentheses_balanced
+        This function ensures that the user input has a valid amount of parentheses and that every parentheses expression is properly closed. 
+
+    def valid_operators
+        This function checks that the input string includes valid operators and ensures that there are no violations of the rules of mathematics. 
+
+    def to_binary
+        This function takes in a value and converts it to binary.
+
+    def to_octal
+        This function takes in a value and converts it to octal.
+
+    def to_hex
+        This function takes in a value and converts it to hex.
+
+    def mean
+        This function takes in a list of numbers and returns the average of all the elements. 
+
+    def maximum
+        This function takes in a list of numbers and returns the maximum value in the set.
+
+    def fibonacci
+        This function takes in a value (limit) and generates fibonacci numbers up to the user specified limit. 
+
+    def F_to_C
+        This function takes in a temperature value and converts it from fahrenheit to celsius.
+
+    def factorial
+        This function takes in a non-negative integer and returns the factorial of it.
+
+    def percentage
+        This function takes in two values, a and b. It calculates what percentage a is of b and then returns that percentage.
+
+    def median
+        This function takes in a list of numbers and returns the median of the list.
+
+    def is_prime
+        This function takes in a value and checks if it is a prime number. If it is, it returns true and false otherwise. 
+
+    def generate_primes
+        This function takes in a user specified value (limit) and generates all prime numbers up until that number.
+
+    def log
+        This function takes in two values, base and a and then returns the logarithm of a with the specified base.
+
+    def square_root
+        This function takes in a value and returns its square root.
+
+    def cube_root
+        This function takes in a value and returns its cubic root.
+    
+    def exponent
+        This function takes in two values and returns the first number raised to the power of the second number. 
+
+    def sine  
+        This function returns the sine of a user specified value. 
+
+    def cosine
+        This function returns the cosine of a user specified value. 
+
+    def tangent
+        This function returns the tangent of a user specified value. 
+
+    def find_smallest
+        This function takes in a list of numbers and returns the smallest value from that set.
+
+    def generate_squares
+        This function takes in a user specified value (limit) and generates all square numbers up until that number.
+
+    def generate_odd_numbers
+        This function takes in a user specified value (limit) and generates all odd numbers up until that number.
+
+    def generate_even_numbers
+        This function takes in a user specified value (limit) and generates all even numbers up until that number.
+
+    def mode
+        This function takes in a list of numbers and returns the mode value from that set.
+
+
+Resources:
+
+    HTML Documentation: https://developer.mozilla.org/en-US/docs/Web/HTML
+    JavaScript Documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+    

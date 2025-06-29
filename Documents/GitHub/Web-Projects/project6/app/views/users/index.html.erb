@@ -1,0 +1,48 @@
+<%=provide(:title,"User Index Page")%>
+<!--
+<% @user.each do |user|%>
+    <p>
+        <strong>ID: </strong><%=user.id%><br>
+        <strong>Name: </strong><%=user.name%><br>
+        <strong>Email: </strong><%=user.email%><br>
+        <strong>Role: </strong><%=user.role%><br>
+        <strong>Created_at: </strong><%=user.created_at%><br>
+        <strong>Updated_at: </strong><%=user.updated_at%><br>
+        <%= link_to 'Edit', edit_user_path(user)%>
+        <%= form_with model: user, method: :delete do |form| %>
+        <%= form.submit 'Delete' %>
+        <%end%>
+
+        <strong>------------------------------------</strong>
+    </p>
+<%end%>
+
+-->
+<h1>Users</h1>
+
+<table class='mytable'>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Created</th>
+        <th>Updated</th>
+        <th></th>
+        <th></th>
+    </tr>
+    <% @user.each do |user| %>
+    <tr>
+        <td><%= user.id%></td>
+        <td><%= user.name%></td>
+        <td><%= user.email%></td>
+        <td><%= user.role%></td>
+        <td><%= user.updated_at%></td>
+        <td><%= user.created_at%></td>
+        <td><%= link_to 'Edit', edit_user_path(user)%></td>
+        <td><%= form_with model: user, method: :delete do |form| %>
+        <%= form.submit 'Delete' %>
+        <%end%></td>
+        </tr>
+        <% end%>
+</table>

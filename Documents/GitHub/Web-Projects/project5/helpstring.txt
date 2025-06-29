@@ -1,0 +1,95 @@
+
+  Help
+
+  AC : Clears the calculator.
+  + : Addition operator.
+    Ex. 4+4=8
+    
+  - : Subtraction operator.
+    Ex. 8-3=5
+    
+  x : Multiplication operator.
+    Ex. 8*2=16
+    
+  ÷ : Division operator
+    Ex. 8÷2=4
+    
+  . : Button that adds a . to numbers to indicate decimal values.
+    Ex. 2.5
+    
+  ( ) : Button to add parentheses to your expression to indicate order of operations. 
+
+  % : Button that invokes the modulo operation
+    Ex. 3%2=1
+    
+  = : Press when you have completed your expression to show the answer. 
+    Ex. (4+4)/2 will yield 4 after this button is pressed.
+    
+  neg : Press this button when you would like to indicate a negative value.
+
+  √ : Use this button to calculate the square root of a number.
+    Ex. √4=2
+    
+  ∛ : Use this button to calculate the cubed root of a number.
+    Ex. ∛8=2
+    
+  exponent : To calculate exponents, input your base as the first number followed by a comma and then your power as the second number.
+    Ex. To calculate 2 raised to the 4th power, input the following: exponent(2, 4)
+    
+  , : Allows you to add a comma to your expression.
+
+  abs val : To calculate the absolute value of a number, press this button and input your number.
+    Ex. absolute(-8) = 8
+    
+  sin : To calculate the sine of a number, press this button and input your number in radians.
+    Ex. sin(30)
+    
+  cos : To calculate the cosine of a number, press this button and input your number in radians.
+    Ex. cos(30)
+    
+  tan : To calculate the tangent of a number, press this button and input your number in radians.
+    Ex. tan(30)
+    
+  π pi : Use this button to invoke the number pi and add it to your current expression. 
+
+  log : Use this button to calculate the logarithm of a number with a specified base.
+    Ex. log(base, a)
+
+    ! : Use this button to calculate the factorial of a number.
+    Ex. factorial(3) = 1*2*3 = 6
+    
+  list : Use this button to invoke the calculator's list analysis capability. Press list then choose your first number then press list add. 
+
+  list add : After invoking list, press a number then press this button to confirm the number being added to the list.
+
+  After you have confirmed your list:
+
+  mean : Press this button to calculate the average of your list.
+  median : Press this button to calculate the median of your list.
+  mode : Press this button to calculate the mode of your list.
+  min : Press this button to calculate the smallest element of your list.
+  max : Press this button to calculate the largest element of your list.
+
+  percentage : Use this button to calculate what percentage a number is of another number.
+    Ex. percentage(a, b) --> Checks what percentage a is of b.
+    
+  to binary : To convert a number from decimal to binary, press this button and input your number.
+  to octal : To convert a number from decimal to octal, press this button and input your number.
+  to hex : To convert a number from decimal to hexadecimal press this button and input your number.
+
+  is prime :   To determine whether or not this number is prime, press this button and input your number.
+    Ex. is_prime(7) --> returns true or false on the screen
+
+  Generate Odds : Use this button to generate all odd numbers within a specified range. 
+    Ex. odds(6,9) will yield a result of [7,9]
+  Generate Evens : Use this button to generate all even numbers within a specified range. 
+    Ex. evens(6,9) will yield a result of [6,8]
+  Generate Primes : Use this button to generate all prime numbers within a specified range.
+    Ex. primes(6,9) will yield a result of [7]
+  Generate Squares : Use this button to generate all squares within a specified range. 
+    Ex. sqaures(0,4) will yield a result of [4]
+  Generate Fibonacci : Use this button to generate all fibonacci numbers within a specified range. 
+    Ex. fibonacci(0,4) will yield a result of [1,1,2]
+
+  F to C : Use this button to convert a number in Fahrenheit to Celsius.
+  

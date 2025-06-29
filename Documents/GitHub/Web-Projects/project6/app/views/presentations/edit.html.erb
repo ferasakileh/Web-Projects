@@ -1,0 +1,13 @@
+<h1>Update Presentation</h1>
+<!--<%= 'render' 'shared/error_messages' %>-->
+<%= form_with(model: @presentation, url: presentation_path(@presentation), method: :patch) do |form| %>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+       <br>
+       <br>
+      <%= form.label :date %>
+      <%= form.date_field :date %>
+       <br>
+       <br>
+    <%= form.submit 'Update Presentation' %>
+<% end %>

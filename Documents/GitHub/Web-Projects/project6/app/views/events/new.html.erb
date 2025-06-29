@@ -1,0 +1,22 @@
+<%= provide(:title, 'Create Event') %>
+<h1>Create New Presentation Event</h1>
+<div class= "newEvent">
+
+<%= form_with(model: @event, local: true) do |form| %>
+    <%= form.label :title %>
+    <%= form.text_field :title, required: true %>
+    <br>
+    <br>
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+    <br>
+    <br>
+    <div class="datetime-select">
+      <%= form.label :date %>
+      <%= form.datetime_select :date, required: true %>
+    </div>
+    <br>
+    <br>
+    <%= form.submit "Create Event" %>
+<% end %>
+</div>

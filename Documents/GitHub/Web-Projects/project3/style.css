@@ -1,0 +1,63 @@
+.css-selector {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    font-family: 'Poppins', sans-serif;
+    position:relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 56px;
+    background:transparent;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(253, 225, 225);
+    margin: 0;
+}
+
+h2 {
+    text-decoration: underline;
+    font-size: 30px;
+    color: crimson;
+}
+
+.list {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.osu {
+    max-width: 200px;
+    max-height: 200px;
+    position: relative;
+    float: right;
+    background-color: white;
+    border: 2px solid white;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+#complete {
+    color: rgb(6, 170, 0);
+}

@@ -1,0 +1,42 @@
+<div class="newEvent">
+<%= form_with(model: evaluation) do |form| %>
+  <% if evaluation.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(evaluation.errors.count, "error") %> prohibited this evaluation from being saved:</h2>
+
+      <ul>
+        <% evaluation.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!--Presentation dropdown-->
+  <div>
+    <%= form.label :presentation_id, "Select Presentation", style: "display: block" %>
+    <%= form.select :presentation_id, Presentation.all.collect { |p| [p.title, p.id] }, prompt: "Choose a Presentation" %>
+  </div>
+  <!--
+  <div>
+    <%= form.label :presentation_id, style: "display: block" %>
+    <%= form.text_field :presentation_id %>
+  </div>
+  -->
+
+  <div>
+    <%= form.label :score, style: "display: block" %> (1-10)
+    <%= form.number_field :score, min: 1, max: 10, required: true %>
+  </div>
+
+  <div>
+    <%= form.label :comments, style: "display: block" %>
+    <%= form.text_area :comments %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+</div>

@@ -1,0 +1,31 @@
+<div class="sign-up">
+<%= provide(:title, 'Sign Up')%>
+<h1>Sign Up</h1>
+
+<%=render 'shared/error_messages'%>
+    <%= form_with(model: @user) do |form| %>
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+        <br>
+        <br>
+        <%= form.label :email %>
+        <%= form.email_field :email %>
+        <br>
+        <br>
+        <%= form.label :role %>
+        <%= form.select  :role, [['Instructor', 'instructor'], ['Student', 'student']], prompt: "Select a role" %>
+        <br>
+        <br>
+        <%= form.label :password %>
+        <%= form.password_field :password %>
+            <br>
+            <br>
+        <%= form.label :password_confirmation, "Confirmation" %>
+        <%= form.password_field :password_confirmation %>
+            <br>
+            <br>
+        <%= form.submit "Create my account" %>
+    <% end %>
+
+    <p>Already have an account? <%=link_to 'Log In',login_path%></p>
+</div>

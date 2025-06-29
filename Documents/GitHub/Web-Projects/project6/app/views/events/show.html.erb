@@ -1,0 +1,69 @@
+<h1>Event Details</h1>
+
+<div class= "event-details">
+<p><strong>ID: </strong><%= @event.id %></p>
+<p><strong>Title: </strong><%= @event.title %></p>
+<p><strong>Date: </strong><%= @event.date %></p>
+<p><strong>Description: </strong><%= @event.description %></p>
+<p><strong>Created At: </strong><%= @event.created_at %></p>
+<p><strong>Updated At: </strong><%= @event.updated_at %></p>
+</div>
+
+<h3>Presentations for this Event</h3>
+
+<% if @event.presentations.any? %>
+    <table class="presentationTable">
+        <tr>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Presenter</th>
+            <th>Evaluations</th>
+            <th>#</th>
+        </tr>
+        
+        <% @event.presentations.each do |presentation| %>
+        <tr>
+            <td><%= presentation.title %></td>
+            <td><%= presentation.date %></td>
+            <td><%= presentation.user.name %></td>
+
+
+            <td>
+                <% if presentation.evaluations.any? %>
+                    <ul>
+                        <% presentation.evaluations.each do |evaluation| %>
+                            <li>
+                                <strong>Reviewer:</strong> <%= evaluation.user.name %><br>
+                                <strong>Comments:</strong> <%= evaluation.comments %><br>
+                                <strong>Rating:</strong> <%= evaluation.score %>
+                            </li>
+                        <% end %>
+                    </ul>
+                <% else %>
+                    <p>No evaluations available for this presentation.</p>
+                <% end %>
+            </td>
+            <td>
+                <% if current_user.instructor? || presentation.user == current_user %>
+                    <%= link_to 'View', presentation_path(presentation) %>
+                <% else %>
+                    Restricted
+                <% end %>
+            </td>
+
+            <td>
+            <% if presentation.file.attached? %>
+            <%= link_to 'View File', rails_blob_path(presentation.file, disposition: 'attachment'), target: '_blank' %>
+            <% else %>
+                No file uploaded
+            <% end %>
+            </td>
+
+            
+        </tr>
+        <% end %>
+    </table>
+<% else %>
+    <p>No presentations have been submitted for this event yet.</p>
+<% end %>
+

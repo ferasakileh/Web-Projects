@@ -1,0 +1,24 @@
+<%= provide(:title, 'Create Presentation')%>
+<h1>New Presentation</h1>
+
+<div class= "newPresentation">
+<%= form_with(model: [@event, @presentation], local: true) do |form| %>
+    <%= form.label :event_id, "Event" %>
+    <%= form.collection_select :event_id, Event.all, :id, :title, prompt: "Select an event", required: true %>
+    <br>
+    <br>
+    <%= form.label :title %>
+    <%= form.text_field :title, required: true %>
+    <br>
+    <br>
+    <%= form.label :date %>
+    <%= form.date_field :date, required: true %>
+    <br>
+    <br>
+    <%= form.label :file %>
+    <%= form.file_field :file %>
+    <br>
+    <br>
+    <%= form.submit "Create Presentation" %>
+<% end %>
+</div>

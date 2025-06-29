@@ -1,0 +1,518 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ 
+
+
+/* General page styling */
+.sign-up body,
+.log-in body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  flex-direction: column;
+}
+
+/* Shared container styling */
+.sign-up,
+.log-in {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  margin: 10px 0;
+}
+
+.sign-up h1,
+.log-in h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Shared form label styling */
+.sign-up label,
+.log-in label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: bold;
+}
+
+/* Shared input and select styling */
+.sign-up input[type="text"],
+.sign-up input[type="email"],
+.sign-up input[type="password"],
+.sign-up select,
+.log-in .form-control {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Shared button styling */
+.sign-up input[type="submit"],
+.log-in .btn-primary {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.sign-up input[type="submit"]:hover,
+.log-in .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Shared error message styling */
+.shared-error-messages {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+/* Additional log-in specific styling */
+.log-in .checkbox.inline {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 5px;
+}
+
+.log-in .checkbox.inline span {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Link styling for additional actions */
+.sign-up p,
+.log-in p {
+  text-align: center;
+  margin-top: 15px;
+  color: #555;
+  font-size: 14px;
+}
+
+.sign-up p a,
+.log-in p a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.sign-up p a:hover,
+.log-in p a:hover {
+  text-decoration: underline;
+}
+
+
+/* HEADER STYLING */
+/* Styling for header to match forms */
+header {
+  font-family: Arial, sans-serif; 
+  background-color: #73b2ff; 
+  border: 1px solid #ddd; 
+  border-radius: 5px; /* Rounded corners */
+  padding: 20px; /* Padding for spacing */
+  margin-bottom: 20px; /* Space below the header */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: center; /* center align the text */
+}
+
+/* Styling for the unordered list in the header */
+header ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Flexbox for layout */
+  justify-content: center; /* Center the list items */
+  gap: 15px; /* Space between items */
+}
+
+/* Styling for the list items */
+header ul li {
+  display: inline; /* Inline layout for list items */
+}
+
+header ul li a {
+  text-decoration: none; /* Remove underline from links */
+  color: #333; /* Neutral text color */
+  font-weight: bold; /* Bold links */
+  padding: 10px 15px; /* Add padding for clickable area */
+  border: 1px solid transparent; /* Subtle border */
+  border-radius: 5px; /* Rounded corners for links */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+header ul li a:hover {
+  background-color: #e6e6e6; /* Highlight background on hover */
+  color: #000; /* Darken text color on hover */
+}
+
+/* Styling for nav links */
+header nav a {
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+  margin: 0 10px;
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header nav a:hover {
+  background-color: #e6e6e6;
+  color: #000;
+}
+
+  
+/* SHOW ALL USERS TABLE STYLING */
+/* General table styling */
+.presentationTable,
+.mytable,
+.eventTable{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Table headers */
+  .eventTable th,
+  .presentationTable th,
+  .mytable th {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  /* Table rows */
+  .presentationTable td,
+  .eventTable td,
+  .mytable td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Alternating row colors for readability */
+  .presentationTable tr:nth-child(even),
+  .eventTable tr:nth-child(even),
+  .mytable tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Hover effect for table rows */
+  .eventTable tr:hover,
+  .presentationTable tr:hover,
+  .mytable tr:hover {
+    background-color: #e8f6ff;
+  }
+  
+  /* Styling for action buttons */
+  .presentationTable td a, 
+  .presentationTable td form input[type="submit"], 
+  .mytable td a, 
+  .mytable td form input[type="submit"],
+  .eventTable td a, 
+  .eventTable td form input[type="submit"] {
+    text-decoration: none;
+    color: #fff;
+    background-color: #429cfc;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  /* Hover effect for buttons */
+  .presentationTable td a:hover,
+  .presentationTable form input[type="submit"]:hover,
+  .eventTable td a:hover,
+  .eventTable form input[type="submit"]:hover,
+  .mytable td a:hover, 
+  .mytable td form input[type="submit"]:hover {
+    background-color: #91c6ff;
+  }
+
+  .btn-primary{
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff; 
+    background-color: #429cfc; 
+    text-align: center;
+    text-decoration: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    border: none; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+  }
+
+  .user-details, .event-details, .presentation-details{
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9; 
+    padding: 30px; 
+    border: 1px solid #ddd;
+    border-radius: 8px; 
+    max-width: 400px; 
+    margin: 20px auto; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .event-details p,
+  .presentation-details p,
+  .user-details p {
+    margin: 10px 0; 
+    line-height: 1.6; 
+    color: #333; 
+  }
+  
+  .event-details strong,
+  .presentation-details strong,
+  .user-details strong {
+    color: #007bff; 
+  }
+  
+  /* Styling for .newEvent Forms */
+.newEvent form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.newEvent form h2 {
+  font-size: 1.5rem;
+  color: #d9534f; /* Error heading color */
+  margin-bottom: 10px;
+}
+
+.newEvent form div {
+  margin-bottom: 15px;
+}
+
+.newEvent form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.newEvent form select,
+.newEvent form input[type="text"],
+.newEvent form input[type="number"],
+.newEvent form input[type="date"],
+.newEvent form textarea,
+.newEvent form input[type="file"],
+.newEvent form input[type="email"],
+.newEvent form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.newEvent form select:focus,
+.newEvent form input:focus,
+.newEvent form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0px 0px 4px rgba(0, 123, 255, 0.25);
+}
+
+.newEvent form textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.newEvent form input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+}
+
+.newEvent form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.newEvent .error-messages {
+  background-color: #f8d7da;
+  color: #842029;
+  padding: 15px;
+  border: 1px solid #f5c2c7;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.newEvent .error-messages ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.newEvent .error-messages ul li {
+  margin-bottom: 5px;
+}
+
+/* Styling for .newPresentation Forms */
+.newPresentation form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.newPresentation form div {
+  margin-bottom: 15px;
+}
+
+.newPresentation form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.newPresentation form select,
+.newPresentation form input[type="text"],
+.newPresentation form input[type="number"],
+.newPresentation form input[type="date"],
+.newPresentation form textarea,
+.newPresentation form input[type="file"],
+.newPresentation form input[type="email"],
+.newPresentation form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.newPresentation form select:focus,
+.newPresentation form input:focus,
+.newPresentation form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0px 0px 4px rgba(0, 123, 255, 0.25);
+}
+
+.newPresentation form textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.newPresentation form input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+}
+
+.newPresentation form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Group and style the dropdowns */
+.newEvent form .datetime-select {
+  display: flex;
+  gap: 10px;
+}
+
+.newEvent form .datetime-select select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.home {
+  text-align: center;
+  background-color: #f9f9f9; /* Light background for contrast */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 20px auto;
+  max-width: 600px; /* Center and limit width */
+  font-family: Arial, sans-serif;
+}
+
+.home h1 {
+  font-size: 2em;
+  color: #333; /* Dark text for readability */
+  margin-bottom: 10px;
+}
+
+.home p {
+  font-size: 1.2em;
+  color: #555; /* Slightly muted text */
+  line-height: 1.5; /* Better readability */
+}
+

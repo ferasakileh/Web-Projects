@@ -1,0 +1,24 @@
+<header>
+<ul>
+  <% if logged_in? %>
+    <li><%=link_to 'Home',home_path%></li>
+    <li><%=link_to 'Sign Up',new_user_path%></li>
+    <li><%=link_to 'Show All Users',show_path%></li>
+    <li><%=link_to 'Create Event', new_event_path%></li>
+    <li><%=link_to 'Show All Events', events_path%></li>
+    <!--<li><%=link_to 'Presentations', presentations_path%></li>-->
+    <li><%=link_to 'Create Presentation',new_presentation_path%></li>
+    <li><%=link_to 'Evaluations', evaluations_path%></li>
+    <% end %>
+</ul>
+<br>
+<nav>
+  <% if logged_in? %>
+    <%= link_to "Profile", current_user %>
+    <%= link_to "Log out", logout_path, data: { "turbo-method": :delete } %>
+  <% else %>
+    <%= link_to "Log in", login_path %> 
+  <% end %>
+</nav>
+
+</header>

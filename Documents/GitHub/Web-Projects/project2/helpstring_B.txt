@@ -1,0 +1,37 @@
+"! : Use this button to calculate the factorial of a number.
+    Ex. factorial(3) = 1*2*3 = 6
+    
+  list : Use this button to invoke the calculator's list analysis capability. Press list then choose your first number then press list add. 
+
+  list add : After invoking list, press a number then press this button to confirm the number being added to the list.
+
+  After you have confirmed your list:
+
+  mean : Press this button to calculate the average of your list.
+  median : Press this button to calculate the median of your list.
+  mode : Press this button to calculate the mode of your list.
+  min : Press this button to calculate the smallest element of your list.
+  max : Press this button to calculate the largest element of your list.
+
+  percentage : Use this button to calculate what percentage a number is of another number.
+    Ex. percentage(a, b) --> Checks what percentage a is of b.
+    
+  to binary : To convert a number from decimal to binary, press this button and input your number.
+  to octal : To convert a number from decimal to octal, press this button and input your number.
+  to hex : To convert a number from decimal to hexadecimal press this button and input your number.
+
+  is prime :   To determine whether or not this number is prime, press this button and input your number.
+    Ex. is_prime(7) --> returns true or false on the screen
+
+  Generate Odds : Use this button to generate all odd numbers within a specified range. 
+    Ex. odds(6,9) will yield a result of [7,9]
+  Generate Evens : Use this button to generate all even numbers within a specified range. 
+    Ex. evens(6,9) will yield a result of [6,8]
+  Generate Primes : Use this button to generate all prime numbers within a specified range.
+    Ex. primes(6,9) will yield a result of [7]
+  Generate Squares : Use this button to generate all squares within a specified range. 
+    Ex. sqaures(0,4) will yield a result of [4]
+  Generate Fibonacci : Use this button to generate all fibonacci numbers within a specified range. 
+    Ex. fibonacci(0,4) will yield a result of [1,1,2]
+
+  F to C : Use this button to convert a number in Fahrenheit to Celsius."
